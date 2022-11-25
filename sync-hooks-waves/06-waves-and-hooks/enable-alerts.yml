@@ -3,8 +3,6 @@ kind: Job
 metadata:
   namespace: example06
   generateName: enable-alerts-
-  annotations:
-    argocd.argoproj.io/hook: PostSync
   labels:
     codefresh.io/cert: enable-job  
 spec:
@@ -15,6 +13,6 @@ spec:
         image: alpine
         command:
           - "sleep"
-          - "30"
+          - "3"
       restartPolicy: Never
   backoffLimit: 2    
